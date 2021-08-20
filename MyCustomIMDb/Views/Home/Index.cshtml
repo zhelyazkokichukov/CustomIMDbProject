@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the best place for rating movies!</h1>
+    <p class="lead">There are no movies in the system currently available so why don't you just add one?</p>
+    <hr class="my-4">
+    <p class="lead">
+        <a asp-controller="Movies" asp-action="Add" class="btn btn-primary btn-lg" role="button">Add Movie</a>
+        <a asp-controller="Movies" asp-action="All" class="btn btn-primary btn-lg" role="button">All Movies</a>
+    </p>
+</div>

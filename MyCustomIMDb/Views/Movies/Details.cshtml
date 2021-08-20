@@ -1,0 +1,36 @@
+﻿@model MovieDetails
+
+<h1>@Model.Title</h1>
+<h5>@Model.ReleaseDate | @Model.Length</h5>
+<img class="card-img-top" src="@Model.ImageURL" alt="@Model.Title">
+
+<form asp-controller="Movies" asp-action="Rate" asp-route-id="@Model.Id">
+    <select asp-for="Rate">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+
+    <input type="submit" name="Rate">
+</form>
+@{
+    double num = 0;
+
+    foreach (var number in Model.Ratings)
+    {
+        num += number;
+    }
+
+    num /= Model.Ratings.Count;
+ }
+<h4>CustomIMDb RATING @num</h4>
+<h4>@Model.PlotSummary</h4>
+<h4>Storyline</h4>
+<h4>@Model.Storyline</h4>
