@@ -399,3 +399,4 @@ C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Vie
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Movies\Edit.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Menu\TopRatedMovies.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Menu\Menu.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Shows\TopRatedShows.cshtml.g.cs
