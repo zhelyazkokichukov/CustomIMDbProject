@@ -18,13 +18,13 @@ namespace MyCustomIMDb.Controllers
             this.data = data;
         }
 
-        public IActionResult Rate(int id,int rate)
+        public IActionResult Rate(int id, int rate)
         {
             var movie = data.Movies
                 .Where(m => m.Id == id)
                 .FirstOrDefault();
 
-                       
+
             var rating = new MovieRating
             {
                 Rating = rate
@@ -40,9 +40,9 @@ namespace MyCustomIMDb.Controllers
         {
             var movie = data.Movies
                 .Where(m => m.Id == id)
-                .Select(m => new MovieDetails 
+                .Select(m => new MovieDetails
                 {
-                    Id =m.Id,
+                    Id = m.Id,
                     Title = m.Title,
                     Length = m.Length,
                     PlotSummary = m.PlotSummary,
@@ -68,13 +68,36 @@ namespace MyCustomIMDb.Controllers
             return View(movie);
         }
 
+        [HttpGet]
         public IActionResult Edit(int id)
         {
-            var movie = data.Movies.Where(m => m.Id == id);
+            var movie = data.Movies.Where(m => m.Id == id).FirstOrDefault();
 
-
-            return View();
+            return View(movie);
         }
+
+        [HttpPost]
+        public IActionResult Edit(Movie preEditedMovie)
+        {
+            var postEditedMovie = new Movie
+            {
+                Title = preEditedMovie.Title,
+                PlotSummary = preEditedMovie.PlotSummary,
+                ImageUrl = preEditedMovie.ImageUrl,
+                Length = preEditedMovie.Length,
+                ReleaseDate = preEditedMovie.ReleaseDate,
+                Storyline = preEditedMovie.Storyline
+            };
+
+            data.Movies.Remove(preEditedMovie);
+
+            data.Movies.Update(postEditedMovie);
+
+            data.SaveChanges();
+
+            return Redirect("/Movies/All");
+        }
+
 
         [HttpGet]
         public IActionResult Add()

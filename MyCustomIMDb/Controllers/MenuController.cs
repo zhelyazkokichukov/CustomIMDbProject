@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyCustomIMDb.Data;
+using MyCustomIMDb.Data.Models;
 using MyCustomIMDb.Models.Movie;
 using System;
 using System.Collections.Generic;
@@ -30,11 +31,15 @@ namespace MyCustomIMDb.Controllers
                     Title = m.Title,
                     ReleaseDate = m.ReleaseDate,
                     Url = m.ImageUrl,
-                    Ratings = m.MovieRating.OrderByDescending(x=> x.Rating).Select(x => x.Rating).ToList()
+                    Ratings = m.MovieRating                  
+                    .Select(x =>  x.Rating)
+                    .ToList()
                 })
                 .ToList();
 
-            return View(movies);
+            var moviesList = movies.OrderByDescending(x => x.Ratings);
+
+            return View(moviesList);
         }
     }
 }

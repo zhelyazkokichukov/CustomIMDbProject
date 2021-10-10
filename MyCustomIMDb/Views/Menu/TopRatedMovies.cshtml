@@ -1,9 +1,12 @@
 ﻿@model List<TopRatedMovies>
 
 <h5>CustomIMDb Charts</h5>
-<h4>Top Rated Movies</h4>>
+<h4>Top Rated Movies</h4>
 
 @foreach (var movie in Model)
 {
-    <h6>@movie.Title (@movie.ReleaseDate)  @movie.Ratings.Sum()/@movie.Ratings.Count</h6>
+    
+        var averageRating = @movie.Ratings.Sum() / @movie.Ratings.Count;
+     
+    <h6>@movie.Title (@movie.ReleaseDate) @averageRating</h6>
 }
