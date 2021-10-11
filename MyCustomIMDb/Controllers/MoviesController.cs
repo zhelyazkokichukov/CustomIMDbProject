@@ -139,5 +139,10 @@ namespace MyCustomIMDb.Controllers
 
             return View(all);
         }
+
+        public IActionResult PhotoGallery()
+        {
+            return View();
+        }
     }
 }

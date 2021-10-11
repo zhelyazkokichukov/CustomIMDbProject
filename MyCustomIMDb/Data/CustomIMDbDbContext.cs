@@ -31,5 +31,7 @@ namespace MyCustomIMDb.Data
         public DbSet<Episode> Episodes { get; init; }
 
         public DbSet<TVShowCastAndCrew> TVShowCastAndCrew { get; init; }
+
+        public DbSet<Photo> PhotoGallery { get; init; }
     }
 }

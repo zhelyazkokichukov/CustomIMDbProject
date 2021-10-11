@@ -12,6 +12,7 @@ namespace MyCustomIMDb.Data.Models
             MovieGenres = new HashSet<MovieGenre>();
             MovieCastAndCrew = new HashSet<MovieCastAndCrew>();
             MovieRating = new HashSet<MovieRating>();
+            PhotoGallery = new HashSet<Photo>();
         }
 
         [Key]
@@ -40,5 +41,7 @@ namespace MyCustomIMDb.Data.Models
         public ICollection<MovieCastAndCrew> MovieCastAndCrew { get; set; }
 
         public ICollection<MovieRating> MovieRating { get; set; }
+
+        public ICollection<Photo> PhotoGallery { get; set; }
     }
 }
