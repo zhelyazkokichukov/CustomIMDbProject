@@ -25,11 +25,13 @@ namespace MyCustomIMDb.Data.Models
         public string PlotSummary { get; set; }
 
         [Required]
-        public string ReleaseDate { get; set; }
+        public string EpisodeAiredDate { get; set; }
 
         [Required]
         public string Length { get; set; }
 
+        [Required]
+        public string Storyline { get; set; }
 
         public string ImageUrl { get; set; }
 
