@@ -47,8 +47,15 @@ using MyCustomIMDb.Models.TVShow;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\Views\_ViewImports.cshtml"
+using MyCustomIMDb.Models.Episode;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c6a2b6f618399783b9aa76f05b644fd053aab35c", @"/Views/Menu/Menu.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f8ce80e789acb8efd78717857606e5bb15a9b195", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43ed89e6133b538ddd14315aa464d38a8faf80bb", @"/Views/_ViewImports.cshtml")]
     public class Views_Menu_Menu : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Menu", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -79,7 +86,7 @@ using MyCustomIMDb.Models.TVShow;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<h5>Hello there!</h5>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6a2b6f618399783b9aa76f05b644fd053aab35c4630", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6a2b6f618399783b9aa76f05b644fd053aab35c4826", async() => {
                 WriteLiteral("Top Rated Movies");
             }
             );

@@ -47,8 +47,15 @@ using MyCustomIMDb.Models.TVShow;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\Views\_ViewImports.cshtml"
+using MyCustomIMDb.Models.Episode;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f8ce80e789acb8efd78717857606e5bb15a9b195", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43ed89e6133b538ddd14315aa464d38a8faf80bb", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

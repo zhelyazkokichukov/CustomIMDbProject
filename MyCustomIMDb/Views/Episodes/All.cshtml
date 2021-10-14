@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AllEpisodesQueryModel>
+
+@{ ViewBag.Title = "All TvShow Episode"; }
+
+<div class="row">
+    @foreach (var episode in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="@episode.ImageURL" alt="@episode.Title @episode.PlotSummary">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-center">@episode.Title (@episode.EpisodeAiredDate)</h5>
+                    <a asp-controller="Episodes" asp-action="Details" asp-route-id="@episode.Id" class="btn btn-primary">View</a>
+                    <a asp-controller="Episodes" asp-action="Delete" asp-route-id="@episode.Id" class="btn btn-danger">Delete</a>
+                    <a asp-controller="Episodes" asp-action="Edit" asp-route-id="@episode.TVShowId" class="btn btn-warning">Edit</a>
+                    @*<a asp-controller="TVShows" asp-action="Rate" asp-route-id="@movie.Id" class="btn btn-primary">Rate</a>*@
+
+                    @*@if (ViewBag.AllowCarEdit == true || User.IsAdmin())
+                        {
+                                <a asp-controller="Cars" asp-action="Edit" asp-route-id="@car.Id" class="btn btn-warning">Edit</a>
+                                <a asp-controller="Cars" asp-action="Delete" asp-route-id="@car.Id" class="btn btn-danger">Delete</a>}*@
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

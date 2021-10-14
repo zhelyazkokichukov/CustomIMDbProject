@@ -405,3 +405,8 @@ C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Vie
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\TVShows\Details.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\TVShows\Delete.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\TVShows\Edit.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Add.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\All.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Delete.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Details.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Edit.cshtml.g.cs
