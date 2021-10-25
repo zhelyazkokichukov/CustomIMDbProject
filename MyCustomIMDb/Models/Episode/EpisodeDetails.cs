@@ -22,5 +22,6 @@ namespace MyCustomIMDb.Models.Episode
         public string EpisodeAiredDate { get; init; }
 
         public int Rate { get; init; }
+
     }
 }

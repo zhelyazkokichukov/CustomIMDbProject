@@ -12,7 +12,7 @@
                     <h5 class="card-title text-center">@episode.Title (@episode.EpisodeAiredDate)</h5>
                     <a asp-controller="Episodes" asp-action="Details" asp-route-id="@episode.Id" class="btn btn-primary">View</a>
                     <a asp-controller="Episodes" asp-action="Delete" asp-route-id="@episode.Id" class="btn btn-danger">Delete</a>
-                    <a asp-controller="Episodes" asp-action="Edit" asp-route-id="@episode.TVShowId" class="btn btn-warning">Edit</a>
+                    <a asp-controller="Episodes" asp-action="Edit" asp-route-id="@episode.Id" class="btn btn-warning">Edit</a>
                     @*<a asp-controller="TVShows" asp-action="Rate" asp-route-id="@movie.Id" class="btn btn-primary">Rate</a>*@
 
                     @*@if (ViewBag.AllowCarEdit == true || User.IsAdmin())

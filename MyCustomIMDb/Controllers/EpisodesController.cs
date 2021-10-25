@@ -33,7 +33,7 @@ namespace MyCustomIMDb.Controllers
         public IActionResult Add(int id, EpisodeFormModel episodeForm)
         {
 
-            var tvshow = data.TVShows.Where(x => x.Id == id).FirstOrDefault();
+            //var tvshow = data.TVShows.Where(x => x.Id == id).FirstOrDefault();
 
             var episode = new Episode
             {
@@ -56,9 +56,7 @@ namespace MyCustomIMDb.Controllers
             //    ImageUrl = tvshow.ImageUrl
             //});
 
-            tvshow.Episodes.Add(episode);
-
-            data.Episodes.Add(episode);
+            data.Episodes.Add(episode);      
 
             data.SaveChanges();
 
@@ -128,21 +126,12 @@ namespace MyCustomIMDb.Controllers
 
         [HttpPost]
         public IActionResult Edit(int tvshowId,Episode preEditedEpisode)
-        {
-            var postEditedEpisode = new Episode
-            {
-                Title = preEditedEpisode.Title,
-                PlotSummary = preEditedEpisode.PlotSummary,
-                ImageUrl = preEditedEpisode.ImageUrl,
-                Length = preEditedEpisode.Length,
-                EpisodeAiredDate = preEditedEpisode.EpisodeAiredDate,
-                Storyline = preEditedEpisode.Storyline
-            };
-
+        {        
             var tvshow = data.TVShows.Where(x => x.Id == tvshowId).FirstOrDefault();
 
             data.TVShows.Update(tvshow);
-            data.Episodes.Update(postEditedEpisode);
+
+            data.Episodes.Update(preEditedEpisode);
 
             data.SaveChanges();
 

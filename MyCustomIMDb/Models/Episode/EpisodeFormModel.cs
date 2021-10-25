@@ -29,5 +29,7 @@ namespace MyCustomIMDb.Models.TVShow
 
         [Required]
         public string Storyline { get; init; }
+
+        public int TVShowId { get; init; }
     }
 }

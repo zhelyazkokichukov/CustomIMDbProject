@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MyCustomIMDb.Models;
 
 namespace MyCustomIMDb.Models.TVShow
 {
     public class TVShowDetails
-    {
-    
+    { 
         public int Id { get; init; }
 
         public string Title { get; init; }
