@@ -16,9 +16,12 @@ namespace MyCustomIMDb.Controllers
 
         private readonly CustomIMDbDbContext data;
 
+        private readonly List<Episode> episodes;
+
         public TVShowsController(CustomIMDbDbContext data)
         {
             this.data = data;
+            episodes = new List<Episode>();
         }
 
         [HttpGet]
@@ -45,7 +48,7 @@ namespace MyCustomIMDb.Controllers
             data.TVShows.Add(tvshow);
             data.SaveChanges();
 
-            return Redirect("/Movies/All");
+            return Redirect("/TVShows/All");
         }
 
         public IActionResult All()
@@ -102,10 +105,11 @@ namespace MyCustomIMDb.Controllers
             return View(tvshow);
         }
 
-
         [HttpPost]
         public IActionResult Edit(TVShow preEditedTVShow)
         {
+            var episodes = data.Episodes.Where(x => x.TVShowId == preEditedTVShow.Id).ToList();
+
             var postEditedTVShow = new TVShow
             {
                 Title = preEditedTVShow.Title,
@@ -113,7 +117,8 @@ namespace MyCustomIMDb.Controllers
                 ImageUrl = preEditedTVShow.ImageUrl,
                 Length = preEditedTVShow.Length,
                 ReleaseDate = preEditedTVShow.ReleaseDate,
-                Storyline = preEditedTVShow.Storyline
+                Storyline = preEditedTVShow.Storyline,
+                Episodes = episodes
             };
 
             data.TVShows.Remove(preEditedTVShow);

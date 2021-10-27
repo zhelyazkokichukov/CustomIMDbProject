@@ -7,29 +7,29 @@
 <form method="post">
     <div class="form-group">
         <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" placeholder="Enter the movie title here">
+        <input asp-for="Title" class="form-control" placeholder="Enter the TVShow title here">
         <span asp-validation-for="Title" class="small text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="PlotSummary"></label>
-        <textarea asp-for="PlotSummary" class="form-control" rows="3" placeholder="A retired Special Forces colonel tries to save his daughter..."></textarea>
+        <textarea asp-for="PlotSummary" class="form-control" rows="3" placeholder="A high school chemistry teacher diagnosed with..."></textarea>
         <span asp-validation-for="PlotSummary" class="small text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Length"></label>
-        <input asp-for="Length" class="form-control" placeholder="2h 16min">
+        <input asp-for="Length" class="form-control" placeholder="49min">
     </div>
     <div class="form-group">
         <label asp-for="ReleaseDate"></label>
-        <input asp-for="ReleaseDate" class="form-control" placeholder="1980">
+        <input asp-for="ReleaseDate" class="form-control" placeholder="2008-2013">
     </div>
     <div class="form-group">
         <label asp-for="Storyline"></label>
-        <textarea asp-for="Storyline" class="form-control" placeholder="For Steve Rogers, awakening after decades of suspended animation involves more than catching up on pop culture; it also means that this old school idealist must face a world of subtler threats and difficult moral complexities. That becomes clear when Director Nick Fury is killed by the mysterious assassin, the Winter Soldier, but not before warning Rogers that SHIELD has been subverted by its enemies. When Rogers acts on Fury's warning to trust no one there, he is branded as a traitor by the organization. Now a fugitive, Captain America must get to the bottom of this deadly mystery with the help of the Black Widow and his new friend, The Falcon. However, the battle will be costly for the Sentinel of Liberty, with Rogers finding enemies where he least expects them while learning that the Winter Soldier looks disturbingly familiar."></textarea>
+        <textarea asp-for="Storyline" class="form-control" placeholder="When chemistry teacher Walter White is diagnosed with Stage III cancer and given only two years to live, he decides he has nothing to lose..."></textarea>
     </div>
     <div class="form-group">
         <label asp-for="ImageUrl"></label>
-        <input asp-for="ImageUrl" class="form-control" placeholder="Enter the url of the movie here">
+        <input asp-for="ImageUrl" class="form-control" placeholder="Enter the url of the tvshow here">
     </div>
 
     <input class="btn btn-primary mt-3" type="submit" value="Save" />

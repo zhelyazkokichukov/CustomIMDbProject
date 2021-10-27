@@ -4,8 +4,10 @@
 <h5>@Model.ReleaseDate | @Model.Length</h5>
 <img class="card-img-top" src="@Model.ImageURL" alt="@Model.Title">
 
+<a asp-controller="Episodes" asp-action="All" asp-route-id="@Model.Id" class="btn btn-primary">Episodes</a>
+<a asp-controller="Episodes" asp-action="Add" asp-route-id="@Model.Id" class="btn btn-primary">Add Episode</a>
 
-<h4>Plot Sumary</h4>
+<h4>Plot Summary</h4>
 
 <h4>@Model.PlotSummary</h4>
 

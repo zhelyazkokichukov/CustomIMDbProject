@@ -1,8 +1,8 @@
-﻿@model TVShow
+﻿@model EpisodeFormModel
 
-@{ ViewBag.Title = "Edit TVShow"; }
+@{ ViewBag.Title = "Add tvshow episode"; }
 
-<h3>Here you can edit the TVShow!</h3>
+<h1>Hello! Here you can add your tvshow episode!</h1>
 
 <form method="post">
     <div class="form-group">
@@ -20,8 +20,8 @@
         <input asp-for="Length" class="form-control" placeholder="49min">
     </div>
     <div class="form-group">
-        <label asp-for="ReleaseDate"></label>
-        <input asp-for="ReleaseDate" class="form-control" placeholder="2008-2013">
+        <label asp-for="EpisodeAiredDate"></label>
+        <input asp-for="EpisodeAiredDate" class="form-control" placeholder="2008-2013">
     </div>
     <div class="form-group">
         <label asp-for="Storyline"></label>
@@ -32,6 +32,7 @@
         <input asp-for="ImageUrl" class="form-control" placeholder="Enter the url of the tvshow here">
     </div>
 
-    <input class="btn btn-primary mt-3" type="submit" value="Edit" />
+    <input class="btn btn-primary mt-3" type="submit" value="Save" />
 
 </form>
+

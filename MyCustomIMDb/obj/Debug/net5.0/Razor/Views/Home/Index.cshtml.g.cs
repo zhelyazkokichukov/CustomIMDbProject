@@ -47,8 +47,15 @@ using MyCustomIMDb.Models.TVShow;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\Views\_ViewImports.cshtml"
+using MyCustomIMDb.Models.Episode;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e57b227bd83bb2a0bfb41ff3082f4f3d5eee47ad", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f8ce80e789acb8efd78717857606e5bb15a9b195", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43ed89e6133b538ddd14315aa464d38a8faf80bb", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Movies", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -95,7 +102,7 @@ using MyCustomIMDb.Models.TVShow;
     <hr class=""my-4"">
     <p class=""lead"">
         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e57b227bd83bb2a0bfb41ff3082f4f3d5eee47ad5729", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e57b227bd83bb2a0bfb41ff3082f4f3d5eee47ad5925", async() => {
                 WriteLiteral("Add Movie");
             }
             );
@@ -115,7 +122,7 @@ using MyCustomIMDb.Models.TVShow;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e57b227bd83bb2a0bfb41ff3082f4f3d5eee47ad7267", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e57b227bd83bb2a0bfb41ff3082f4f3d5eee47ad7463", async() => {
                 WriteLiteral("All Movies");
             }
             );
