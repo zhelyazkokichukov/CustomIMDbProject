@@ -73,33 +73,46 @@ namespace MyCustomIMDb.Controllers
         {
             var movie = data.Movies.Where(m => m.Id == id).FirstOrDefault();
 
-            return View(movie);
+            var movieFormModel = new MovieFormModel
+            {
+                Title = movie.Title,
+                PlotSummary = movie.PlotSummary,
+                Storyline = movie.Storyline,
+                Length = movie.Length,
+                ImageUrl = movie.ImageUrl,
+                ReleaseDate = movie.ReleaseDate,
+            };
+
+            return View(movieFormModel);
         }
 
         [HttpPost]
-        public IActionResult Edit(Movie preEditedMovie)
+        public IActionResult Edit(int id,MovieFormModel preEditedMovie)
         {
-            var postEditedMovie = new Movie
+            var movie = data.Movies.Where(x => x.Id == id).FirstOrDefault();
+
+            if (ModelState.IsValid)
             {
-                Title = preEditedMovie.Title,
-                PlotSummary = preEditedMovie.PlotSummary,
-                ImageUrl = preEditedMovie.ImageUrl,
-                Length = preEditedMovie.Length,
-                ReleaseDate = preEditedMovie.ReleaseDate,
-                Storyline = preEditedMovie.Storyline
-            };
+                //var postEditedMovie = new Movie
+                //{
+                //    Title = preEditedMovie.Title,
+                //    PlotSummary = preEditedMovie.PlotSummary,
+                //    ImageUrl = preEditedMovie.ImageUrl,
+                //    Length = preEditedMovie.Length,
+                //    ReleaseDate = preEditedMovie.ReleaseDate,
+                //    Storyline = preEditedMovie.Storyline
+                //};
+                
+                //data.Movies.Remove(preEditedMovie);
 
-            data.Movies.Remove(preEditedMovie);
+                data.SaveChanges();
 
-            data.Movies.Update(postEditedMovie);
+                return Redirect("/Movies/All");
+            }
 
-            data.SaveChanges();
-
-            return Redirect("/Movies/All");
+            return Redirect("/Movies/All");                 
         }
 
-
-        [HttpGet]
         public IActionResult Add()
         {
             var movie = new MovieFormModel();
@@ -110,20 +123,27 @@ namespace MyCustomIMDb.Controllers
         [HttpPost]
         public IActionResult Add(MovieFormModel movieForm)
         {
-            var movie = new Movie
+            if (ModelState.IsValid)
             {
-                Title = movieForm.Title,
-                PlotSummary = movieForm.PlotSummary,
-                ImageUrl = movieForm.ImageUrl,
-                Length = movieForm.Length,
-                ReleaseDate = movieForm.ReleaseDate,
-                Storyline = movieForm.Storyline
-            };
+                var movie = new Movie
+                {
+                    Title = movieForm.Title,
+                    PlotSummary = movieForm.PlotSummary,
+                    ImageUrl = movieForm.ImageUrl,
+                    Length = movieForm.Length,
+                    ReleaseDate = movieForm.ReleaseDate,
+                    Storyline = movieForm.Storyline
+                };
 
-            data.Movies.Add(movie);
-            data.SaveChanges();
+                data.Movies.Add(movie);
+                data.SaveChanges();
 
-            return Redirect("/Movies/All");
+                return Redirect("/Movies/All");
+            }
+
+            return Redirect("/Movies/Add");
+            
+               // add model state check
         }
 
         public IActionResult All()

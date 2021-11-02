@@ -410,3 +410,6 @@ C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Vie
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Delete.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Details.cshtml.g.cs
 C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\Edit.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Movies\_MovieFormPartial.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\TVShows\_TVShowFormPartial.cshtml.g.cs
+C:\Users\Zheko\source\repos\MyCustomIMDb\MyCustomIMDb\obj\Debug\net5.0\Razor\Views\Episodes\_EpisodeFormPartial.cshtml.g.cs
